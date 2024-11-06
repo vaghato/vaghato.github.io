@@ -93,7 +93,93 @@
               </td>
             </tr>
           </tbody></table>
+
+
+
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            
+            <tr>
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <div class="one">
+                  <img src='images/eqnio.png' width="230" height="150">
+                </div>
+              </td>
+              <td style="padding:20px;width:75%;vertical-align:middle">
+                <a href="https://arxiv.org/abs/2408.06321">
+                  <span class="papertitle">EqNIO: Subequivariant Neural Inertial Odometry</span>
+                </a>
+                <br>
+                <a href=https://scholar.google.com/citations?user=37Eq28IAAAAJ&hl=en>Royina Karegoudra Jayanth*</a>,
+                <a href=https://www.cis.upenn.edu/~xuyin/>Yinshuang Xu*</a>,
+                <a href=https://ziyunclaudewang.github.io/>Ziyun Wang</a>,
+                <strong>Evangelos Chatzipantazis</strong>,
+                <a href=https://danielgehrig18.github.io/>Daniel Gehrig</a>,
+                <a href="https://www.cis.upenn.edu/~kostas/">Kostas Daniilidis</a>
+                <br>
+                <em>Under Review</em>, 2024
+                <br>
+                <a href="https://arxiv.org/abs/2408.06321">arXiv</a> / 
+                <a href="https://drive.google.com/file/d/1o0XuYGGke1g2xwA2XFo5vD_K5_c5U71x/view?usp=sharing">slides</a>
+                <p>
+                  Neural networks are seeing rapid adoption in purely inertial odometry, where accelerometer and gyroscope measurements 
+                  from commodity inertial measurement units (IMU) are used to regress displacements and associated uncertainties. 
+                  They can learn informative displacement priors, which can be directly fused with the raw data with off-the-shelf 
+                  non-linear filters. Nevertheless, these networks do not consider the physical roto-reflective symmetries inherent in 
+                  IMU data, leading to the need to memorize the same priors for every possible motion direction, which hinders generalization. 
+                  In this work, we characterize these symmetries and show that the IMU data and the resulting displacement and covariance 
+                  transform equivariantly, when rotated around the gravity vector and reflected with respect to arbitrary planes 
+                  parallel to gravity. We design a neural network that respects these symmetries by design through equivariant processing 
+                  in three steps: First, it estimates an equivariant gravity-aligned frame from equivariant vectors and invariant scalars derived 
+                  from IMU data, leveraging expressive linear and non-linear layers tailored to commute with the underlying symmetry 
+                  transformation. We then map the IMU data into this frame, thereby achieving an invariant canonicalization that can be 
+                  directly used with off-the-shelf inertial odometry networks. Finally, we map these network outputs back into the original 
+                  frame, thereby obtaining equivariant covariances and displacements. We demonstrate the generality of our framework by 
+                  applying it to the filter-based approach based on TLIO, and the end-to-end RONIN architecture, and show better performance 
+                  on the TLIO, Aria, RIDI and OxIOD datasets than existing methods.
+                </p>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <div class="one">
+                  <img src='images/charis.png' width="220" height="175">
+                </div>
+              </td>
+              <td style="padding:20px;width:75%;vertical-align:middle">
+                <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10644471">
+                  <span class="papertitle">Structural Risk Minimization for Learning Nonlinear Dynamics</span>
+                </a>
+                <br>
+                <a href=https://charis-stamouli.github.io/>Charis Stamouli</a>,
+                <strong>Evangelos Chatzipantazis</strong>,
+                <a href="https://www.georgejpappas.org/">George Pappas</a>
+                <br>
+                <em>American Control Conference ACC</em>, 2024
+                <br>
+                <font color="red"><strong>(Best Student Paper Award)</strong></font>
+                <br>
+                <a href="https://arxiv.org/abs/2309.16527">arXiv</a> / 
+                <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10644471">proceedings</a> /
+                <a href="https://drive.google.com/file/d/1s5i2JSPaQC0Ugjq2ADARsO8mwVRUzaou/view?usp=sharing">slides</a>
+                <p>
+                  Recent advances in learning or identification of nonlinear dynamics focus on learning a suitable model 
+                  within a pre-specified model class. However, a key difficulty that remains is the choice of the model class from 
+                  which the dynamics will be learned. The fundamental challenge is trading the richness of the model class with the 
+                  learnability within the model class. Toward addressing the so-called model selection problem, we introduce a novel 
+                  notion of Structural Risk Minimization (SRM) for learning nonlinear dynamics. Inspired by classical SRM for classification, 
+                  we minimize a bound on the true prediction error over hierarchies of model classes. The class selected by our SRM scheme is 
+                  shown to achieve a nearly optimal learning guarantee among all model classes contained in the hierarchy. 
+                  Employing the proposed scheme along with computable model class complexity bounds, we derive explicit SRM schemes 
+                  for learning nonlinear dynamics under hierarchies of: i) norm-constrained Reproducing Kernel Hilbert Spaces, and 
+                  ii) norm-constrained Neural Network classes. We empirically show that even though too loose to be used as absolute 
+                  estimates, our SRM bounds on the true prediction error are able to track its relative behavior across different 
+                  model classes of the hierarchy.
+                </p>
+              </td>
+            </tr>
+            
+            
             <tr onmouseout="se3video_stop()" onmouseover="se3video_start()">
               <td style="padding:20px;width:25%;vertical-align:middle">
                 <div class="one">
